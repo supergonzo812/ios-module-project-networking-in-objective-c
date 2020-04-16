@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1965" y="131"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--View Controller-->
         <scene sceneID="Dgg-ug-dUm">
             <objects>
-                <viewController id="yo8-fX-SN1" customClass="LSIWeatherViewController" sceneMemberID="viewController">
+                <viewController id="yo8-fX-SN1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lkY-La-AYb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="183" y="131"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="slO-RX-8LN">
             <objects>
-                <viewController id="VlB-iJ-5gq" sceneMemberID="viewController">
+                <viewController id="VlB-iJ-5gq" customClass="LSIWeatherViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UOj-PS-QSH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,7 +429,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IkN-xw-7XZ">
                                 <rect key="frame" x="0.0" y="334" width="414" height="124"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NB9-ic-j0d">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NB9-ic-j0d">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -437,7 +437,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YFi-hA-uUA">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="-2" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XaW-65-ZQA">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -486,6 +486,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OLX-8f-pVV"/>
                     </view>
+                    <connections>
+                        <outlet property="dailyForecastTableView" destination="jsz-7R-pQC" id="6q7-rO-M2d"/>
+                        <outlet property="daylLabel" destination="9r8-7z-5Jx" id="gKu-h8-sfi"/>
+                        <outlet property="hiTempLabel" destination="AHg-Ow-7qE" id="Fqh-VY-uxz"/>
+                        <outlet property="hourlyForecastCollectionView" destination="IkN-xw-7XZ" id="wFO-tz-a2E"/>
+                        <outlet property="loTempLabel" destination="nhL-eP-CMk" id="kQ3-Lf-jMw"/>
+                        <outlet property="locationLabel" destination="R6X-rr-caY" id="AkH-kQ-jVl"/>
+                        <outlet property="summaryLabel" destination="P8i-GA-5s5" id="jcK-Tn-1Ei"/>
+                        <outlet property="tempLabel" destination="bgX-Nl-IyN" id="ImZ-n4-vW5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iS4-rm-88h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

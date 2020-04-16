@@ -28,19 +28,17 @@
 
 // Outlets
 
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UITableView *dailyForecastTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *hourlyForecastCollectionView;
+
+
+//Daily forecast outlets
+@property (weak, nonatomic) IBOutlet UILabel *daylLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hiTempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loTempLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *weatherDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mphLabel;
-@property (weak, nonatomic) IBOutlet UILabel *feelsLikeTempLabel;
-@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
-@property (weak, nonatomic) IBOutlet UILabel *chanceOfRainLabel;
-@property (weak, nonatomic) IBOutlet UILabel *UVIndexLabel;
-
-
-
 
 @end
 
@@ -51,10 +49,7 @@
 
 @end
 
-
 @implementation LSIWeatherViewController
-
-
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -76,15 +71,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.locationManager.delegate = self;
+//    [self.dailyForecastTableView setDelegate:self];
+//    [_dailyForecastTableView setDelegate:LSIWeatherViewController];
+//    self.dailyForecastTableView.delegate = self;
+//    self.hourlyForecastCollectionView.delegate = self;
+//    self.locationManager.delegate = self;
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
     
-    [self.toolBar setBackgroundImage:[UIImage new]
-                  forToolbarPosition:UIBarPositionAny
-                          barMetrics:UIBarMetricsDefault];
-    [self.toolBar setShadowImage:[UIImage new]
-              forToolbarPosition:UIBarPositionAny];
 }
 
 

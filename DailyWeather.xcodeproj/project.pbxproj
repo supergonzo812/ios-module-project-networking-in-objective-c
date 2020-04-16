@@ -10,6 +10,8 @@
 		725A638E2448E9E40084B5C5 /* LSICurrentForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 725A638D2448E9E40084B5C5 /* LSICurrentForecast.m */; };
 		725A63912448E9F20084B5C5 /* LSIDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 725A63902448E9F20084B5C5 /* LSIDailyForecast.m */; };
 		725A63942448E9FE0084B5C5 /* LSIHourlyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 725A63932448E9FE0084B5C5 /* LSIHourlyForecast.m */; };
+		725A6397244909600084B5C5 /* HourlyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725A6396244909600084B5C5 /* HourlyCollectionViewCell.m */; };
+		725A639A2449098F0084B5C5 /* DailyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725A63992449098F0084B5C5 /* DailyTableViewCell.m */; };
 		726EBA0B2447A7F100DF72EC /* LSIWeatherForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 726EBA0A2447A7F100DF72EC /* LSIWeatherForecast.m */; };
 		726EBA0C2447A7F100DF72EC /* LSIWeatherForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 726EBA0A2447A7F100DF72EC /* LSIWeatherForecast.m */; };
 		BD69313723FD905200C0DF09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD69313623FD905200C0DF09 /* AppDelegate.m */; };
@@ -59,6 +61,10 @@
 		725A63902448E9F20084B5C5 /* LSIDailyForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIDailyForecast.m; sourceTree = "<group>"; };
 		725A63922448E9FE0084B5C5 /* LSIHourlyForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIHourlyForecast.h; sourceTree = "<group>"; };
 		725A63932448E9FE0084B5C5 /* LSIHourlyForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIHourlyForecast.m; sourceTree = "<group>"; };
+		725A6395244909600084B5C5 /* HourlyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HourlyCollectionViewCell.h; sourceTree = "<group>"; };
+		725A6396244909600084B5C5 /* HourlyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourlyCollectionViewCell.m; sourceTree = "<group>"; };
+		725A63982449098F0084B5C5 /* DailyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTableViewCell.h; sourceTree = "<group>"; };
+		725A63992449098F0084B5C5 /* DailyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTableViewCell.m; sourceTree = "<group>"; };
 		726EBA092447A7F100DF72EC /* LSIWeatherForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIWeatherForecast.h; sourceTree = "<group>"; };
 		726EBA0A2447A7F100DF72EC /* LSIWeatherForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIWeatherForecast.m; sourceTree = "<group>"; };
 		BD69313223FD905200C0DF09 /* DailyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +193,10 @@
 				BD69315D23FD907800C0DF09 /* LSIWeatherViewController.m */,
 				BD69316D23FD912000C0DF09 /* LSISettingsTableVC.h */,
 				BD69316C23FD912000C0DF09 /* LSISettingsTableVC.m */,
+				725A6395244909600084B5C5 /* HourlyCollectionViewCell.h */,
+				725A6396244909600084B5C5 /* HourlyCollectionViewCell.m */,
+				725A63982449098F0084B5C5 /* DailyTableViewCell.h */,
+				725A63992449098F0084B5C5 /* DailyTableViewCell.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -327,7 +337,9 @@
 				725A63942448E9FE0084B5C5 /* LSIHourlyForecast.m in Sources */,
 				BD69316723FD90D100C0DF09 /* LSILog.m in Sources */,
 				BD69313723FD905200C0DF09 /* AppDelegate.m in Sources */,
+				725A639A2449098F0084B5C5 /* DailyTableViewCell.m in Sources */,
 				726EBA0B2447A7F100DF72EC /* LSIWeatherForecast.m in Sources */,
+				725A6397244909600084B5C5 /* HourlyCollectionViewCell.m in Sources */,
 				725A638E2448E9E40084B5C5 /* LSICurrentForecast.m in Sources */,
 				BDFC8F7223FD999000A39B21 /* LSICardinalDirection.m in Sources */,
 				BD69316923FD90D100C0DF09 /* LSIErrors.m in Sources */,
