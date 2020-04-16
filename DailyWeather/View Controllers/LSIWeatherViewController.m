@@ -27,17 +27,18 @@
 @property (nonatomic) LSICurrentForecast *forecast;
 
 // Outlets
-@property (weak, nonatomic) IBOutlet UIImageView *weatherImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
-@property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *chanceOfRainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weatherDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mphLabel;
 @property (weak, nonatomic) IBOutlet UILabel *feelsLikeTempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
-@property (weak, nonatomic) IBOutlet UILabel *uvIndexLabel;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+@property (weak, nonatomic) IBOutlet UILabel *chanceOfRainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *UVIndexLabel;
+
 
 
 
