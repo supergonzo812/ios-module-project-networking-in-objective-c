@@ -148,21 +148,16 @@
 
 - (void)requestWeatherForLocation:(CLLocation *)location {
     
-  if(!_requestedLocation) {
-        _requestedLocation = YES;
-        __block BOOL requestedLocation = _requestedLocation;
-        
-        [self requestCurrentPlacemarkForLocation:location withCompletion:^(CLPlacemark *place, NSError *error) {
-            
-            NSLog(@"Location: %@, %@", place.locality, place.administrativeArea);
-            self.placemark = place;
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self updateViews];
-            });
-            requestedLocation = NO;
-        }];
-    }
+ NSURL *currentWeatherURL = [[NSBundle mainBundle] URLForResource:@"CurrentWeather" withExtension:@"json"];
+ NSData *jsonData = [NSData dataWithContentsOfURL:currentWeatherURL];
+ 
+ NSError *error = nil;
+ NSDictionary *json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+ 
+ self.forecast = [[LSICurrentForecast alloc] initWithDictionary:json];
+ if (error) {
+     NSLog(@"JSON Parsing Error: %@", error);
+ }
     
 }
 
@@ -177,9 +172,17 @@
     if (self.forecast) {
         
         NSLog(@"TEMP: %@", self.forecast);
-        self.temperatureLabel.text = [NSString stringWithFormat: @"%0.0fºF", self.forecast.temperature];
+        self.tempLabel.text = [NSString stringWithFormat: @"%0.0fºF", self.forecast.temperature];
+        // Need to get day out of time
+//        self.daylLabel.text = [NSString stringWithFormat:@"%@", self.forecast.time];
+        self.hiTempLabel.text = [NSString stringWithFormat:@"%dºF", self.forecast.]
         
-        self.weatherImage.image = [LSIWeatherIcons weatherImageForIconName:self.forecast.icon];
+        @property (weak, nonatomic) IBOutlet UILabel *hiTempLabel;
+        @property (weak, nonatomic) IBOutlet UILabel *loTempLabel;
+        @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+        @property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
+        @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+        
     }
 }
 
